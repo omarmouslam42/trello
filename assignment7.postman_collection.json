@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "89e733a5-5c12-45ea-b9fc-bda9ef3494ad",
+		"name": "assignment7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24627764"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"omar55\",\r\n    \"email\":\"omar55@gmail.com\",\r\n    \"password\":\"123456789\",\r\n    \"age\":22,\r\n    \"phone\":\"01143867815\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"omar22@gmail.com\",\r\n    \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib21hcjIyIiwiaWQiOiI2NGIyNmRmYTUyYmJiMzE4ZmZjMGNjZjUiLCJpc0xvZ2dlZCI6dHJ1ZSwiaWF0IjoxNjg5NDI4MDA1LCJleHAiOjE2ODk0MzE2MDV9.B7Ji6VSzfDwfV_xQBp0crScWaBG2S3CA15QuxaiL4IA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib21hcjIyIiwiaWQiOiI2NGIyNmRmYTUyYmJiMzE4ZmZjMGNjZjUiLCJpc0xvZ2dlZCI6dHJ1ZSwiaWF0IjoxNjg5NDMxNzE5LCJleHAiOjE2ODk1MTgxMTl9.7nndsl78v5rwB3sQs7lVH-Yb0_ifkSguTDqBkan1jng",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"01143867816\",\r\n    \"NewPassword\":\"01143867817\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib21hcjIyIiwiaWQiOiI2NGIzZDQyZjM3ZjliM2YyYWRjOGI2ZmMiLCJpc0xvZ2dlZCI6dHJ1ZSwiaWF0IjoxNjg5NTA2OTYxLCJleHAiOjE2ODk1OTMzNjF9.QaDp-5gaxVKgRFKsixtOuYf6Km_uE3o7OBnEZWC-vXo",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"omar\",\r\n    \"lastName\":\"mouslam\",\r\n    \"age\":\"25\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib21hcjIyIiwiaWQiOiI2NGIyNmRmYTUyYmJiMzE4ZmZjMGNjZjUiLCJpc0xvZ2dlZCI6dHJ1ZSwiaWF0IjoxNjg5NDMxNzE5LCJleHAiOjE2ODk1MTgxMTl9.7nndsl78v5rwB3sQs7lVH-Yb0_ifkSguTDqBkan1jng",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/user/deleteUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"deleteUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "softDeleted",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib21hcjIyIiwiaWQiOiI2NGIzZDQyZjM3ZjliM2YyYWRjOGI2ZmMiLCJpc0xvZ2dlZCI6dHJ1ZSwiaWF0IjoxNjg5NTA2OTYxLCJleHAiOjE2ODk1OTMzNjF9.QaDp-5gaxVKgRFKsixtOuYf6Km_uE3o7OBnEZWC-vXo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/user/softDelete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"softDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logOut",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib21hciIsImlkIjoiNjRiM2Q0MjMzN2Y5YjNmMmFkYzhiNmY5IiwiaXNMb2dnZWRJbiI6dHJ1ZSwiaWF0IjoxNjg5NTA4ODY4LCJleHAiOjE2ODk1OTUyNjh9.3g_GfKFv69GLkck5pqOcj5SKG89h9KulvNdrCKE5ClU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/user/logOut",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"logOut"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "addTask",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib21hciIsImlkIjoiNjRiM2Q0MjMzN2Y5YjNmMmFkYzhiNmY5IiwiaXNMb2dnZWRJbiI6dHJ1ZSwiaWF0IjoxNjg5NTE4MzY4LCJleHAiOjE2ODk2MDQ3Njh9.GdpS3lRQtlXn1AlzkOeYptBBuh5U-Cgv5-p7oO6TNho",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"jop5\",\r\n    \"description\":\"good jop dced\",\r\n    \"status\":\"toDo\",\r\n    \"deadline\":\"2023-07-19\",\r\n    \"assignTo\":\"64b51d0968c4070bd55dd05f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/task/addTask",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"task",
+								"addTask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTask",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib21hciIsImlkIjoiNjRiM2Q0MjMzN2Y5YjNmMmFkYzhiNmY5IiwiaXNMb2dnZWRJbiI6dHJ1ZSwiaWF0IjoxNjg5NTE4MzY4LCJleHAiOjE2ODk2MDQ3Njh9.GdpS3lRQtlXn1AlzkOeYptBBuh5U-Cgv5-p7oO6TNho",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"offer\",\r\n    \"description\":\"good offer\",\r\n    \"status\":\"Done\",\r\n    \"assignTo\":\"64b3d42f37f9b3f2adc8b6fc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/task/updateTask/64b3d42337f9b3f2adc8b6f9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"task",
+								"updateTask",
+								"64b3d42337f9b3f2adc8b6f9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllTaskswithUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/task/getAllTaskswithUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"task",
+								"getAllTaskswithUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Tasks Of oneUser Data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib21hciIsImlkIjoiNjRiM2Q0MjMzN2Y5YjNmMmFkYzhiNmY5IiwiaXNMb2dnZWRJbiI6dHJ1ZSwiaWF0IjoxNjg5NTE4MzY4LCJleHAiOjE2ODk2MDQ3Njh9.GdpS3lRQtlXn1AlzkOeYptBBuh5U-Cgv5-p7oO6TNho",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/task/TasksOfoneUserData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"task",
+								"TasksOfoneUserData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tasksOfEmploy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib21hcjIyIiwiaWQiOiI2NGIzZDQyZjM3ZjliM2YyYWRjOGI2ZmMiLCJpc0xvZ2dlZEluIjp0cnVlLCJpYXQiOjE2ODk1OTA3OTEsImV4cCI6MTY4OTY3NzE5MX0.dKiKJSF2SfXDxDvVvLC1dzueac4dYSZFaF6a7B8z5Bc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/task/tasksOfEmploy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"task",
+								"tasksOfEmploy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "taskLate",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoib21hcjIyIiwiaWQiOiI2NGIzZDQyZjM3ZjliM2YyYWRjOGI2ZmMiLCJpc0xvZ2dlZEluIjp0cnVlLCJpYXQiOjE2ODk1OTA3OTEsImV4cCI6MTY4OTY3NzE5MX0.dKiKJSF2SfXDxDvVvLC1dzueac4dYSZFaF6a7B8z5Bc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/task/tasksLate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"task",
+								"tasksLate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
